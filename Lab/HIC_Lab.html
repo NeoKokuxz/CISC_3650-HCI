@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<script src="HIC_lab.js"></script>
+
+<head>
+    <title>BC-Hub</title>
+</head>
+
+<body style="margin-left:35%">
+    <div id="div1">
+        <h1>Brooklyn College HIC Lab</h1>
+        <p id="divTest" style="margin-right:80%"> Detaild page: Body paragraph</p>
+    </div>
+    <!--Select-->
+    <div>
+        <select>
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+        </select>
+        <button>confirm</button>
+    </div>
+    <br>
+    <!--Select Multiple-->
+    <div>
+        <p>Hold down ctrl key to select mutiple</p>
+        <select multiple size="5">
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+            <option>Hello</option>
+        </select>
+        <button>confirm</button>
+    </div>
+    <br>
+    <!--Test/Color Change button-->
+    <div>
+        <button type="button" onclick='document.getElementById("divTest").innerHTML = "DivTest! Text Changer!"'>
+            Click me to change text!
+        </button>
+        <button type="button" onclick=changeColor()>Click me to change color!</button>
+    </div>
+    <br>
+    <!--AutoTab between textfields-->
+    <div>
+        <p>Auto tab between fields</p>
+        a: <input type="text" data-max=5 maxlegnth=5 oninput="skipIfMax(this)" />
+        b: <input type="text" data-max=5 maxlength=5 oninput="skipIfMax(this)" />
+        c: <input type="text" data-max=5 maxlength=5 oninput="skipIfMax(this)" />
+    </div>
+    <br>
+    <!--Password check-->
+    <div>
+        Password:<input type="password" id="password1" /> <br>
+        Comfirm Password: <input type="password" id="password2" /> <br>
+        <p id="passwordTest" style="margin-right:80%"> Green for match and red for mismatch!</p>
+        <button id="checkPressed" type="button" onclick=checkPassWord()>Process Password</button>
+    </div>
+    <br>
+    <!--Username check-->
+    <div>
+        <p>Check for username validation</p>
+        Please enter username<input type="text" id="username" />
+        <br>
+        <p id="usernameTest">Hello~</p>
+        <button id="checkUserName" , type="button" onclick=checkUserName()>Click to check username</button>
+    </div>
+    <br>
+    <!--Convert app Upper case-->
+    <div>
+        <p>Convert Upper Case</p>
+        <input type="text" id="userInput" />
+        <p id="UpperOutput">Hello!</p>
+        <button type="button" onclick=upperConvert()>Click me to convert UPPERCASE</button>
+    </div>
+    <!--subm button-->
+    <div>
+        <p>Please enter name and age to continue</p>
+        Name:<input type="text" id="name" onkeydown=CheckNameAndAge() onkeyup=CheckNameAndAge() onkeypress=CheckNameAndAge()/><br>
+        Age:<input type="text" id="age" onkeydown=CheckNameAndAge() onkeyup=CheckNameAndAge() onkeypress=CheckNameAndAge()><br>
+        <button type="button" id="checkButton" onclick=CheckNameAndAge() disabled="disabled">Continue</button><br>
+    </div>
+</body>
+
+</html>
